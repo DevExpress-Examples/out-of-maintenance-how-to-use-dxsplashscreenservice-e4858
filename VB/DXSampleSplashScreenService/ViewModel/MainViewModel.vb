@@ -1,16 +1,19 @@
-﻿Imports DevExpress.Mvvm
+Imports DevExpress.Mvvm
 Imports DevExpress.Mvvm.POCO
 Imports DevExpress.Mvvm.DataAnnotations
 Imports System
 Imports System.Threading
 
 Namespace DXSampleSplashScreenService.ViewModel
-    <POCOViewModel> _
+
+    <POCOViewModel>
     Public Class MainViewModel
-        Public Overridable Property Delay() As Integer
-        Protected ReadOnly Property SplashScreenService() As ISplashScreenService
+
+        Public Overridable Property Delay As Integer
+
+        Protected ReadOnly Property SplashScreenService As ISplashScreenService
             Get
-                Return Me.GetService(Of ISplashScreenService)()
+                Return GetService(Of ISplashScreenService)()
             End Get
         End Property
 
